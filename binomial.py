@@ -7,12 +7,14 @@ def convinatoria(n, x):
 
 
 def dBinomial(n,x,p):
-    return round(convinatoria(n,x)*(p**x)*(1-p)**(n-x),5)
+    return round(convinatoria(n,x)*(p**x)*(1-p)**(n-x),7)
 
 s = 0
-for i in range(0,5):
-    s  += dBinomial(20,i,0.2)
-final = 1 - s
-print(final)    
+for i in range(0,10):
+    s  = dBinomial(10,i,0.01)
+    print(s)
+""" final = 1 - s
+print(final)     """
 
-#print(dBinomial(20,i,0.2))
+print("Respuesta solita")
+print(dBinomial(10,3,0.4))
