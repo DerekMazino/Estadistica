@@ -5,16 +5,14 @@ def factorial(num):
 def convinatoria(n, x):
     return factorial(n)/(factorial(x)*factorial(n-x))
 
+
 def dBinomial(n,x,p):
-    return round(convinatoria(n,x)*(p**x)*(1-p)**(n-x),2)
+    return round(convinatoria(n,x)*(p**x)*(1-p)**(n-x),5)
 
-def rango(c, f, p):
-    final = 0
-    for i in range(c, 4):
-        s = dBinomial(f,i,p)
-        final+=s
-        print(s, final)
-    return final
+s = 0
+for i in range(0,5):
+    s  += dBinomial(20,i,0.2)
+final = 1 - s
+print(final)    
 
-print(dBinomial(18,4,0.1))
-print(round(1-rango(0,18,0.1),2))
+#print(dBinomial(20,i,0.2))
